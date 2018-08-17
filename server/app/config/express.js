@@ -9,6 +9,7 @@ import bodyParser from 'body-parser'
 /**
  * Local modules
  */
+import auth from './auth'
 import routes from '../api/router'
 
 /**
@@ -18,6 +19,8 @@ const app = express();
 
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({limit: '100mb', extended: true }));
+
+app.use(auth())
 
 app.use(cors({  
   credentials: true,

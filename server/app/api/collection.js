@@ -5,17 +5,17 @@ import { Router } from 'express'
 
 import validate from 'express-validation'
 
-import { flashcardValidation } from './validation'
-import { findAll, create } from '../database/repository/flash_card'
+import { collectionValidation } from './validation'
+import { create, findAll } from '../database/repository/collection'
 
 const router = Router()
 
 router.get('/', (req, res) => {
-  findAll({ order: [['front', 'ASC']] })
+  findAll({ order: [['title', 'ASC']] })
     .then(data => res.send(data))
 });
 
-router.post('/', validate(flashcardValidation), ({ body, auth }, res) => {    
+router.post('/', validate(collectionValidation), ({ body }, res) => {    
   create(body)
     .then(data => res.send(data))
 });

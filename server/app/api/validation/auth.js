@@ -5,8 +5,7 @@ let Joi = require('joi');
 module.exports = {
   options: { allowUnknownBody: true },
   body: {
-    front: Joi.string().required(),
-    back: Joi.string().required(),
-    collection_id: Joi.number().required()
+    login: Joi.string().required(),
+    pwd: Joi.string().required()
   }
 };

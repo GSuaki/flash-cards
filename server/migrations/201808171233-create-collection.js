@@ -1,25 +1,18 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('flash_card', {
+    return queryInterface.createTable('collection', {
       id: {
         allowNull: false,
         primaryKey: true,
         autoIncrement: true,
         type: Sequelize.INTEGER
       },
-      front: {
+      title: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      back: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      displayed_times: {
-        type: Sequelize.INTEGER
-      },
-      collection_id: {
+      user_id: {
         type: Sequelize.INTEGER,
         allowNull: false
       },
@@ -37,6 +30,6 @@ module.exports = {
     })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('flash_card');
+    return queryInterface.dropTable('collection');
   }
 };
