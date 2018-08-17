@@ -20,7 +20,7 @@ export function handle401(err, req, res, next) {
   if(err.name === 'UnauthorizedError') {
     res
       .status(401)
-      .send({ message: err.message })
+      .send({ message: err.message, code: 'user.unauthorized' })
     
     logger.error(JSON.stringify(withoutStack(err)))
     return
