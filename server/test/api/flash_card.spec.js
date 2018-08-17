@@ -64,13 +64,16 @@ describe('FlashCard API', () => {
       });
   });
 
-  it('Should list Flash Cards', done => {
+  it.only('Should list Flash Cards', done => {
     FlashCard.bulkCreate([
       newFlashCard('Gabriel', 12),
-      newFlashCard('Priscila', 12)
+      newFlashCard('Priscila', 12),
+      newFlashCard('Hello', 13),
+      newFlashCard('Hollar', 14)
     ]).then(() => {
       request(app)
         .get('/flash-cards')
+        .query('collection_id=12')
         .set('Accept', 'application/json')
         .set('Authorization', jwt())
         .end((err, res) => {

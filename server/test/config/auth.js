@@ -1,6 +1,6 @@
 
 export function jwt() {
-  return "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6ImdzdWFraSIsImlhdCI6MTUzNDUyOTc1OX0.ehLCH2D8EBGP3K7TelOK44zVOd7U1VYWlFPLn2-Umc4";
+  return "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkdhYnJpZWwiLCJlbWFpbCI6ImdhYnJpZWwuc3Vha2lAaG90bWFpbC5jb20iLCJsb2dpbiI6ImdzdWFraSIsImNyZWF0ZWRfYXQiOiIyMDE4LTA4LTE3VDIxOjI5OjE5LjAwMFoiLCJpYXQiOjE1MzQ1NDEzNTl9.rBsbDMkqZmLIGtYPjMwjKrcPhwZDlCXhSkimmaADdW4";
 }
 
 export default {
